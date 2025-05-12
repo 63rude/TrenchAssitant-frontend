@@ -1,0 +1,31 @@
+<section id="recent-session-content" class="section-bg-dark-gray-1 py-16 px-4 sm:px-6 lg:px-8 text-center">
+  <div class="max-w-xl mx-auto">
+    <h2 class="text-3xl font-bold mb-6 text-color-on-dark-primary">Already ran a session?</h2>
+    <p class="text-lg mb-8 text-color-on-dark-muted">
+      Enter your wallet address to quickly load previous analysis results.
+    </p>
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8 w-full">
+      <input 
+        id="recentSessionInput"
+        type="text" 
+        placeholder="Enter wallet address" 
+        class="input-dark-bg"
+      >
+      <button 
+        id="loadRecentResultsBtn"
+        class="btn-neon-secondary w-full sm:w-auto flex-shrink-0 text-lg"
+      >
+        Load Results
+      </button>
+    </div>
+    <!-- Local status updates for this section -->
+    <div id="recent-session-status-container" class="w-full min-h-[50px] mb-4">
+        <!-- Status messages managed by updateRecentSessionStatus -->
+    </div>
+    <!-- Container for the results, managed by fetchAndDisplayResults -->
+    <div id="recent-session-results-container" class="results-display-dark w-full mx-auto hidden text-left p-4 rounded-md bg-gray-900 border border-gray-700">
+      <!-- Content will be rendered here by fetchAndDisplayResults -->
+      <div id="recent-session-results-content"></div>
+    </div>
+  </div>
+</section>

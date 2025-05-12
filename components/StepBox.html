@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StepBox Component</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap');
+
+    .step-number {
+      font-weight: 900; /* Extra bold for the number */
+      line-height: 1; /* Tighten line height for the large number */
+    }
+  </style>
+</head>
+<body class="bg-gray-50 p-8">
+
+  <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">StepBox Component Example</h2>
+
+  <!-- 
+    StepBox Component Structure 
+    - step-number-container: Holds the large step number
+    - content-container: Holds the title and description
+  -->
+  <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out max-w-sm mx-auto">
+    <div class="flex flex-col items-center text-center">
+      <div class="mb-4">
+        <span class="text-7xl text-indigo-600 step-number">1</span>
+      </div>
+      <h3 class="text-2xl font-semibold text-gray-900 mb-2">Step Title Here</h3>
+      <p class="text-gray-600 text-sm leading-relaxed">
+        This is a concise one-line description for this particular step.
+      </p>
+    </div>
+  </div>
+
+  <h2 class="text-3xl font-bold text-center text-gray-800 mt-20 mb-12">Usage in a Responsive 4-Step Guide</h2>
+
+  <div class="max-w-7xl mx-auto">
+    <!-- Grid container: 1 col on mobile, 2 on tablet, 4 on desktop -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+      <!-- StepBox 1 -->
+      <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out">
+        <div class="flex flex-col items-center text-center">
+          <div class="mb-3">
+            <span class="text-6xl text-indigo-500 step-number">1</span>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Sign Up</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Create your account in just a few simple clicks.
+          </p>
+        </div>
+      </div>
+
+      <!-- StepBox 2 -->
+      <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out">
+        <div class="flex flex-col items-center text-center">
+          <div class="mb-3">
+            <span class="text-6xl text-purple-500 step-number">2</span>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Configure</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Set up your preferences and personalize your experience.
+          </p>
+        </div>
+      </div>
+
+      <!-- StepBox 3 -->
+      <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out">
+        <div class="flex flex-col items-center text-center">
+          <div class="mb-3">
+            <span class="text-6xl text-pink-500 step-number">3</span>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Launch</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Go live with your project and share it with the world.
+          </p>
+        </div>
+      </div>
+      
+      <!-- StepBox 4 -->
+      <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out">
+        <div class="flex flex-col items-center text-center">
+          <div class="mb-3">
+            <span class="text-6xl text-teal-500 step-number">4</span>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Analyze</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Track your progress and gain valuable insights.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="mt-20">
+    <!-- This is just to add some space at the bottom -->
+  </div>
+
+</body>
+</html>

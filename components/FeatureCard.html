@@ -1,0 +1,16 @@
+<!--
+  Reusable Feature Card Component
+  - Uses Tailwind CSS for layout and spacing.
+  - Uses semantic classes from styles/color-logic.css for colors:
+    - card-dark-theme: For the card background and base border.
+    - card-dark-theme-title: For the feature title text.
+    - card-dark-theme-text: For the feature description text.
+  - Hover effect (border color change) is defined in card-dark-theme:hover in color-logic.css.
+-->
+<div class="card-dark-theme p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out flex flex-col items-center text-center">
+  <span class="text-5xl mb-4" role="img" aria-label="Feature Icon">🌟</span>
+  <h3 class="card-dark-theme-title text-xl font-semibold mb-2">Feature Title</h3>
+  <p class="card-dark-theme-text text-sm">
+    This is a short and engaging description of the feature. Keep it concise.
+  </p>
+</div>

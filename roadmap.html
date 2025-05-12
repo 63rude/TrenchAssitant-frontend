@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roadmap - TrenchAssistant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <link href="/styles/colors.css" rel="stylesheet">
+    <link href="/styles/color-logic.css" rel="stylesheet">
+    <link href="/styles/custom.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: var(--color-bg-primary);
+            color: var(--color-text-on-dark-primary);
+        }
+        main {
+            flex-grow: 1;
+        }
+        .page-section {
+            margin-bottom: 2.5rem; /* 40px */
+            padding: 1.5rem; /* 24px */
+            background-color: var(--color-bg-surface-secondary);
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 255, 135, 0.1); /* Subtle neon glow */
+        }
+        .page-section:last-child {
+            margin-bottom: 0;
+        }
+        .page-section h2 {
+            font-size: 2rem; /* 32px */
+            font-weight: 700;
+            color: var(--color-accent-primary); /* Neon green for titles */
+            margin-bottom: 1.5rem; /* 24px */
+            padding-bottom: 0.75rem; /* 12px */
+            border-bottom: 2px solid var(--color-accent-primary-darker);
+            text-shadow: 0 0 8px var(--color-accent-primary-glow);
+        }
+        .page-section p, 
+        .page-section li {
+            font-size: 1rem; /* 16px */
+            line-height: 1.7;
+            color: var(--color-text-on-dark-secondary);
+            margin-bottom: 1rem; /* 16px */
+            max-width: 100%; /* Allow text to use full width of .page-section */
+        }
+        .page-section strong {
+            color: var(--color-text-on-dark-primary);
+            font-weight: 600;
+        }
+        .page-section ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .page-section ul li {
+            position: relative;
+            padding-left: 1.75rem; /* 28px for icon */
+            margin-bottom: 0.75rem; /* 12px */
+            /* max-width: 100%; is inherited from the rule above if needed, or can be specified here too */
+        }
+        .page-section ul li::before {
+            content: '\f00c'; /* Font Awesome check icon */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 4px;
+            color: var(--color-accent-primary);
+            font-size: 1rem; /* 16px */
+        }
+        .page-intro {
+            font-size: 1.25rem; /* 20px */
+            line-height: 1.8;
+            color: var(--color-text-on-dark-primary);
+            margin-bottom: 2.5rem; /* 40px */
+            text-align: center;
+            padding: 1rem;
+        }
+        .page-conclusion {
+            font-size: 1.125rem; /* 18px */
+            line-height: 1.7;
+            color: var(--color-text-on-dark-primary);
+            margin-top: 2.5rem; /* 40px */
+            padding: 1.5rem; /* 24px */
+            background-color: var(--color-bg-surface-primary); /* Slightly different background */
+            border-left: 5px solid var(--color-accent-secondary);
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 4px 15px rgba(0, 180, 255, 0.1); /* Different accent glow */
+        }
+        .page-conclusion strong {
+            color: var(--color-accent-secondary);
+        }
+        .page-header-static {
+            margin-bottom: 3rem; /* 48px */
+            text-align: center;
+            padding: 2rem 0;
+            border-bottom: 1px solid var(--color-border-dark-primary);
+        }
+        .page-header-static h1 {
+            font-size: 3rem; /* 48px */
+            font-weight: 700;
+        }
+        @media (min-width: 768px) {
+            .page-header-static h1 {
+                font-size: 3.5rem; /* 56px */
+            }
+        }
+    </style>
+</head>
+<body class="font-sans leading-relaxed">
+    <div id="navbar-container">
+        <!-- Navbar will be loaded here -->
+    </div>
+
+    <main id="main-content" class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+        <header class="page-header-static">
+            <h1 class="neon-title">Roadmap</h1>
+        </header>
+
+        <p class="page-intro">
+            Welcome to the TrenchAssistant roadmap. Here we outline our strategic vision, key development phases, and the exciting features we plan to introduce. Our journey is focused on delivering a cutting-edge analytics platform for the modern trader.
+        </p>
+        
+        <div class="space-y-10">
+            <section class="page-section">
+                <h2>Context – The Birth of Trench Assistant</h2>
+                <p>Trench Assistant borns from the shared mission of two traders 🧑‍💻🧑‍💻 with an academic background in data analysis 📊 and combinatorics, immersed in the crypto space since 2021 🚀. We’ve spent years in the trenches — not just watching charts 📉 but actively navigating every kind of market condition, trading obscure tokens 💎, and constantly searching for an edge in this difficult environment. We’re not spectators; we’re part of the game 🎮. We know how critical it is to move with purpose and we’ve been working on a way to apply our technical knowledge and analytical mindset to extract real alpha 🐺 from the noise.</p>
+                <p>Our mission is simple: to build a tool designed for traders like us. Trench Assistant is developed to deliver actionable, data-driven, and, above all, highly personalized insights using statistical analysis, helping traders make informed decisions in an environment often driven by sentiment and hype 📢. In this space, even a small edge can be crucial for surviving and winning 🏆, and that’s why we’re here: to provide a real tool for the ones still grinding in the trenches.</p>
+                <p>Building meaningful trading statistics in this chaotic environment is notoriously difficult 🤯. The sheer number of variables — from volatile market conditions to shifting narratives and liquidity traps 🎣 — makes it nearly impossible to apply a one-size-fits-all model. So we flipped the script 🔄. Trench Assistant doesn’t try to generalize; it adapts. It doesn’t give you templated metrics; it gives you context. We tailor our tool to each individual trader by analyzing their historical trades, identifying patterns in behavior, and cross-referencing that with macro-level crypto conditions. For example, your raw win rate might mean little on its own — but knowing how that rate changes depending on BTC position with respect to your preferred MA, its RSI, the relative strength of SOL, or how a token’s volume compares to the average of similarly aged and sized tokens during that same timeframe? That’s alpha ✨.</p>
+            </section>
+
+            <section class="page-section">
+                <h2>The Product 🛠️</h2>
+                <p>Trench Assistant is a personalized analytics tool designed to help crypto traders gain clarity on their own behavior by identifying hidden patterns and contextual triggers that influence profitability. By simply entering a wallet address 💼, users can generate a custom statistical profile based on their trading history. The tool surfaces behavioral trends and correlates them with broader market conditions — helping users understand not just their past actions and results, but how those relate to external factors.</p>
+                <p>At the heart of our approach is the belief that only you truly understand your own trading style. Some traders follow structured patterns. Others buy into narratives. Some ape after a tweet. For this reason, generic data sets not only fail to give you an advantage— they can even lead you in the wrong direction. Whatever drives your decisions, Trench Assistant is built to help you make sense of it — not with one-size-fits-all metrics, but with actionable insights derived by your behavior, your timing, and your edge.</p>
+                <p>The product provides deep, adaptive analytics powered by multivariate statistics and artificial intelligence 🧠. By analyzing how multiple variables — like market structure, asset correlations, and personal trading behavior influence your trades’ outcome, Trench Assistant delivers insights that go beyond surface-level stats. The tool is able to show how your profitability shifts depending on several conditions, such as the value of any TradingView indicator,  on chain data and token characteristics, givin you a probabilistic range of expected outcomes under specific conditions.</p>
+                <p>Trench Assistant will be accessible through our terminal 💻 starting seven days after the token launch. Access will require only token ownership — no staking, no lock-ups. This approach allows us to monitor real usage, estimate computational demand, and fine-tune performance while keeping access as open as possible. Just enter a wallet address — no wallet connection required, and no exposure to smart contract risk, and if it holds the required amount of tokens, the analysis runs. Additionally, it will be possible to analyze other addresses beyond your own. This feature will inevitably require proof of token ownership and connection to the terminal.</p>
+                <p>To offer a glimpse of what’s coming, we’ve launched a basic demo version on our website. It’s intentionally minimal, showcasing only foundational features to demonstrate the core mechanics, while incentivizing token ownership to access useful features. On the demo terminal, users can analyze up to 50 transactions per wallet, with a maximum of 3 requests per address. These limits help us reserve API bandwidth and computing power for token holders, ensuring they receive the smoothest and most responsive experience. If you encounter any issues while trying to use the demo, please contact us on our social channels.</p>
+            </section>
+
+            <section class="page-section">
+                <h2>Step One: Terminal Opening - Data 🚀📊</h2>
+                <p>The terminal will be unlocked, giving token holders access to all core features, already developed and operational. Through the terminal, users will be able to perform multivariate statistical analysis using up to 7 (for now) variables simultaneously. These variables range from technical indicators to on-chain data, and will continuously expand over time. Users can further customize the analysis by setting parameters like the number of trades to consider, excluding outliers, skipping weekends, and more.</p>
+                <p>You’ll simply enter your address, and if it holds the required token amount (see Tokenomics section), the analysis will be performed instantly. Alternatively, by connecting your wallet to verify token ownership, you’ll unlock the ability to analyze any wallet — making it possible to extract insights from profitable addresses. Terminal usage will be unlimited for eligible users and addresses.</p>
+            </section>
+
+            <section class="page-section">
+                <h2>Step Two: Terminal Evolution – Token-Specific & Social Metrics 🪙💬</h2>
+                <p>In this phase, we’ll introduce a new layer of functionality focused on uncovering hidden insights related to individual tokens. One of the key additions will be the integration of social engagement metrics, a feature already in advanced development that we are currently tuning by using AI to effectively identify and filter out artificial activity, to provide a reliable engagement indicator. Additionally, we’re building tools to analyze other wallets that hold a specific token, identifying how many of them are profitable and classified as smart money. These capabilities are meant to empower traders with a more complete system, combining the personalized profitability metrics based on the external environment with these new token-specific characteristics.</p>
+            </section>
+
+            <section class="page-section">
+                <h2>Step Three: Continuous Expansion - From Data 📈🌱</h2>
+                <p>As we continue to refine and optimize existing features, new tools will be added to further enhance the platform. For wallets with a significant trading history, we plan to implement a feature for suggested optimal position sizing based on the Kelly Criterion, calibrated using each user’s personal trading performance.</p>
+                <p>As always, we’ll remain open to community feedback and suggestions throughout every stage of the platform’s evolution. Our long-term goal is to build a living, adaptive system that evolves in sync with every trader who uses it.</p>
+            </section>
+        </div>
+
+        <p class="page-conclusion">
+            This roadmap represents our current vision for TrenchAssistant. We are committed to adapting and evolving based on technological advancements and community input. <strong>Join us as we build the future of trading analytics!</strong>
+        </p>
+    </main>
+
+    <div id="footer-container">
+        <!-- Footer will be loaded here -->
+    </div>
+
+    <script src="/scripts/loadPageShell.js" type="module"></script>
+</body>
+</html>

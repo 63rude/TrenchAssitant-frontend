@@ -1,0 +1,52 @@
+<section id="recent-recheck-content" class="bg-page-secondary py-16 px-4 sm:px-6 lg:px-8 text-center">
+  <h2 class="text-3xl font-bold mb-4 text-color-on-dark-primary">Recent Re-check</h2>
+  <p class="text-lg text-color-on-dark-muted mb-12 max-w-2xl mx-auto">
+    Stay updated with the latest status of contracts you're monitoring.
+  </p>
+  <div class="mt-8 max-w-3xl mx-auto w-full space-y-4">
+    <!-- Example of using RecentRecheckItem.html -->
+    <!-- In a real application, these would be dynamically generated -->
+
+    <!-- Item 1: Verified Safe -->
+    <div class="card-dark-theme flex flex-col sm:flex-row justify-between items-center p-4 rounded-lg shadow-md hover:shadow-neon-xs transition-shadow duration-300">
+      <div class="flex items-center mb-2 sm:mb-0">
+        <i class="fas fa-shield-alt text-color-accent-secondary mr-3 text-lg"></i>
+        <span class="font-mono text-sm text-color-on-dark-primary">0x1234...abcd</span>
+      </div>
+      <span class="status-message-success py-1 px-3 text-xs rounded-full">Verified Safe</span>
+    </div>
+
+    <!-- Item 2: Caution Advised -->
+    <div class="card-dark-theme flex flex-col sm:flex-row justify-between items-center p-4 rounded-lg shadow-md hover:shadow-neon-xs transition-shadow duration-300">
+      <div class="flex items-center mb-2 sm:mb-0">
+        <i class="fas fa-exclamation-triangle text-[var(--color-status-warning-text)] mr-3 text-lg"></i>
+        <span class="font-mono text-sm text-color-on-dark-primary">0x5678...efgh</span>
+      </div>
+      <span class="status-message-warning py-1 px-3 text-xs rounded-full">Caution Advised</span>
+    </div>
+
+    <!-- Item 3: Re-checking -->
+    <div class="card-dark-theme flex flex-col sm:flex-row justify-between items-center p-4 rounded-lg shadow-md hover:shadow-neon-xs transition-shadow duration-300">
+      <div class="flex items-center mb-2 sm:mb-0">
+        <i class="fas fa-hourglass-half text-[var(--color-status-loading-text)] mr-3 text-lg"></i>
+        <span class="font-mono text-sm text-color-on-dark-primary">0x9abc...ijkl</span>
+      </div>
+      <span class="status-message-loading py-1 px-3 text-xs rounded-full">Re-checking...</span>
+    </div>
+
+    <!-- Item 4: High Risk -->
+    <div class="card-dark-theme flex flex-col sm:flex-row justify-between items-center p-4 rounded-lg shadow-md hover:shadow-neon-xs transition-shadow duration-300">
+      <div class="flex items-center mb-2 sm:mb-0">
+        <i class="fas fa-times-circle text-[var(--color-status-error-text)] mr-3 text-lg"></i>
+        <span class="font-mono text-sm text-color-on-dark-primary">0xdef0...mnop</span>
+      </div>
+      <span class="status-message-error py-1 px-3 text-xs rounded-full">High Risk</span>
+    </div>
+  </div>
+  <div class="mt-10">
+    <a href="#" class="btn-secondary-neon">
+      View All Re-checks
+      <i class="fas fa-arrow-right ml-2"></i>
+    </a>
+  </div>
+</section>

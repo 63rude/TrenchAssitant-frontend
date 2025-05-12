@@ -1,0 +1,510 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap');
+
+/* styles/colors.css contains the color variable definitions */
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-on-dark-secondary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Section specific backgrounds */
+.section-bg-darkest { background-color: var(--color-bg-primary); }
+.section-bg-dark-gray-1 { background-color: var(--color-bg-secondary); }
+.section-bg-dark-gray-2 { background-color: var(--color-bg-tertiary); }
+.section-bg-light-primary { background-color: var(--color-bg-light-primary); color: var(--color-text-on-light-primary); }
+.section-bg-light-secondary { background-color: var(--color-bg-light-secondary); color: var(--color-text-on-light-primary); }
+
+
+section h2 { /* General section titles */
+  font-size: 1.875rem; /* 30px, Tailwind text-3xl */
+  line-height: 2.25rem; /* 36px */
+  font-weight: 700; /* bold */
+  margin-bottom: 1rem; /* mb-4 */
+}
+@media (min-width: 640px) { /* sm: */
+  section h2 {
+    font-size: 2.25rem; /* 36px, Tailwind text-4xl */
+    line-height: 2.5rem; /* 40px */
+  }
+}
+
+/* Titles on dark backgrounds */
+.section-bg-darkest h2,
+.section-bg-dark-gray-1 h2,
+.section-bg-dark-gray-2 h2 {
+  color: var(--color-text-on-dark-primary);
+}
+/* Titles on light backgrounds */
+.section-bg-light-primary h2,
+.section-bg-light-secondary h2 {
+  color: var(--color-text-on-light-primary);
+}
+
+section p { /* General section paragraphs */
+  font-size: 1.125rem; /* text-lg */
+  line-height: 1.75rem;
+  max-width: 42rem; /* max-w-2xl */
+}
+/* Paragraphs on dark backgrounds */
+.section-bg-darkest p,
+.section-bg-dark-gray-1 p,
+.section-bg-dark-gray-2 p {
+  color: var(--color-text-on-dark-muted);
+}
+/* Paragraphs on light backgrounds */
+.section-bg-light-primary p,
+.section-bg-light-secondary p {
+  color: var(--color-text-on-light-secondary);
+}
+
+section .text-gradient-accent {
+  background-image: linear-gradient(to right, var(--color-accent-primary), var(--color-accent-secondary), var(--color-accent-tertiary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Neon Title Effect */
+.neon-title {
+  color: var(--color-accent-primary);
+  text-shadow: 0 0 0.5px var(--color-accent-primary), 0 0 1.5px var(--color-accent-hover);
+}
+
+/* Logo Halo Effect */
+.logo-halo {
+  filter: drop-shadow(0 0 3px var(--color-accent-primary)) drop-shadow(0 0 6px var(--color-accent-primary));
+}
+
+/* Emoji Halo Effect */
+.emoji-halo {
+  filter: drop-shadow(0 0 2px var(--color-accent-primary)) drop-shadow(0 0 4px var(--color-accent-secondary));
+}
+
+
+/* Input and Results Containers Styling */
+#hero-status-indicator-container .status-indicator-wrapper {
+  margin-top: 1.5rem; /* mt-6 */
+  width: 100%;
+  max-width: 48rem; /* Increased max-width from 36rem */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Containers on dark backgrounds (Hero section) */
+#hero-session-results-container,
+#hero-session-logs-container {
+  margin-top: 1.5rem; /* Keep margin */
+  width: 100%;
+  max-width: 48rem; /* Increased max-width from 36rem (approx 75% on large screens) */
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  background-color: rgba(26, 26, 26, 0.95); /* Slightly less transparent */
+  padding: 1.5rem; /* Increased padding (p-6) */
+  border-radius: 0.75rem; /* rounded-xl */
+  font-size: 0.9rem; /* Base font size */
+  border: 1px solid var(--color-border-dark-secondary); /* Slightly lighter border */
+  box-shadow: 0 0 8px rgba(0, 255, 153, 0.15); /* Subtle neon green glow */
+  max-height: 350px; /* Increased max-height from 250px */
+  overflow-y: auto; /* Ensure scrollbar appears when needed */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+#hero-session-results-container:hover,
+#hero-session-logs-container:hover {
+  border-color: var(--color-border-accent);
+  box-shadow: 0 0 12px rgba(0, 255, 153, 0.25); /* Enhanced glow on hover */
+}
+#hero-session-results-container pre,
+#hero-session-logs-container pre {
+  font-family: 'Fira Code', monospace; /* Monospace font */
+  white-space: pre-wrap; /* Wrap long lines */
+  word-break: break-all; /* Break long words if necessary */
+  color: var(--color-text-on-dark-secondary);
+  font-size: 0.875rem; /* Explicit font size for pre */
+  line-height: 1.6; /* Slightly increased line spacing for readability */
+}
+
+/* Recent session results container */
+#recent-session-results-container {
+  margin-top: 1.5rem; /* Increased margin-top */
+  width: 100%;
+  max-width: 48rem; /* Increased max-width to match hero */
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  padding: 1.5rem; /* Increased padding (p-6) */
+  border-radius: 0.75rem; /* Increased rounded corners (rounded-xl) */
+  font-size: 0.9rem; /* Slightly larger base font size */
+  border-width: 1px;
+  border-style: solid;
+  max-height: 350px; /* Increased max-height to match hero */
+  overflow-y: auto;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.recent-results-dark {
+  background-color: rgba(26, 26, 26, 0.95); /* Match hero section */
+  color: var(--color-text-on-dark-secondary);
+  border-color: var(--color-border-dark-secondary);
+  box-shadow: 0 0 8px rgba(0, 255, 153, 0.15); /* Subtle neon green glow */
+}
+.recent-results-dark:hover {
+  border-color: var(--color-border-accent);
+  box-shadow: 0 0 12px rgba(0, 255, 153, 0.25); /* Enhanced glow on hover */
+}
+.recent-results-dark pre {
+  font-family: 'Fira Code', monospace; /* Monospace font */
+  color: var(--color-text-on-dark-secondary);
+  white-space: pre-wrap;
+  word-break: break-all;
+  font-size: 0.875rem; /* Explicit font size for pre */
+  line-height: 1.6; /* Match hero */
+}
+.recent-results-light { /* Keep light theme styling consistent if used */
+  background-color: var(--color-bg-surface-light);
+  color: var(--color-text-on-light-primary);
+  border-color: var(--color-border-light-primary);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05); /* Subtle shadow for light */
+}
+.recent-results-light:hover {
+  border-color: var(--color-border-accent);
+  box-shadow: 0 0 12px rgba(0, 255, 153, 0.15); /* Neon glow on hover for light too */
+}
+.recent-results-light pre {
+  font-family: 'Fira Code', monospace; /* Monospace font */
+  color: var(--color-text-on-light-primary);
+  white-space: pre-wrap;
+  word-break: break-all;
+  font-size: 0.875rem; /* Explicit font size for pre */
+  line-height: 1.6; /* Match hero */
+}
+
+
+/* Navbar logo styles */
+.navbar-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--color-accent-primary);
+}
+
+/* Custom button styles */
+.btn-neon {
+  background-color: #00cc88; /* slightly desaturated neon green */
+  color: #ffffff;
+  font-weight: 600;
+  padding: 0.75rem 1.75rem;
+  font-size: 1.05rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 3px #00cc88, 0 0 5px #00b87a; /* softer glow */
+  transition: all 0.3s ease-in-out;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+.btn-neon:hover {
+  background-color: #00b87a; /* darker hover shade */
+  box-shadow: 0 0 4px #00cc88, 0 0 6px #00b87a;
+}
+
+.btn-neon-secondary {
+  background-color: #1f1f30; /* dark purple-ish base */
+  color: #ffffff;
+  font-weight: 600;
+  padding: 0.75rem 1.75rem;
+  font-size: 1.05rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 3px #7a44ff, 0 0 5px #6740d4; /* toned-down purple glow */
+  transition: all 0.3s ease-in-out;
+  border: 1px solid #6740d4;
+  cursor: pointer;
+  text-align: center;
+}
+.btn-neon-secondary:hover {
+  background-color: #2c2c3a;
+  border-color: #7a44ff;
+  box-shadow: 0 0 5px #7a44ff, 0 0 7px #6740d4;
+}
+
+/* Input field styling */
+.input-dark-bg { /* For inputs on dark backgrounds */
+  width: 100%;
+  padding: 0.9rem 1.25rem; /* Taller and more padded */
+  font-size: 1rem; /* Standard font size for readability */
+  color: var(--color-text-on-dark-secondary);
+  background-color: var(--color-bg-surface-primary);
+  border: 1px solid var(--color-border-dark-primary);
+  border-radius: 0.5rem; /* rounded-lg */
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* shadow-sm */
+  outline: none;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.input-dark-bg::placeholder {
+  color: var(--color-text-on-dark-placeholder);
+  opacity: 1; /* Ensure placeholder is fully visible */
+}
+.input-dark-bg:focus {
+  border-color: var(--color-border-accent);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05), 0 0 0 3px rgba(0, 255, 153, 0.3); /* shadow-sm + ring effect */
+}
+
+.input-light-bg { /* For inputs on light backgrounds */
+  width: 100%;
+  padding: 0.9rem 1.25rem;
+  font-size: 1rem;
+  color: var(--color-text-on-light-primary);
+  background-color: var(--color-bg-surface-light);
+  border: 1px solid var(--color-border-light-primary);
+  border-radius: 0.5rem; /* rounded-lg */
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* shadow-sm */
+  outline: none;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.input-light-bg::placeholder {
+  color: var(--color-text-on-light-placeholder);
+  opacity: 1;
+}
+.input-light-bg:focus {
+  border-color: var(--color-border-accent);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05), 0 0 0 3px rgba(0, 255, 153, 0.3); /* shadow-sm + ring effect */
+}
+
+
+/* Link styling */
+a { /* Default link style, good for dark backgrounds */
+  color: var(--color-accent-primary);
+  text-decoration: none; /* Removing default underline */
+  transition: color 0.3s ease-in-out;
+}
+a:hover {
+  color: var(--color-accent-hover);
+  text-decoration: underline; /* Underline on hover for clarity */
+}
+
+.link-on-light { /* For links on light backgrounds */
+  color: var(--color-accent-primary);
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+.link-on-light:hover {
+  color: var(--color-accent-hover);
+  text-decoration: underline;
+}
+
+.text-link-default-on-dark {
+  color: var(--color-text-on-dark-secondary);
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+.text-link-default-on-dark:hover {
+  color: var(--color-accent-primary);
+  text-decoration: underline;
+}
+
+.text-link-default-on-light {
+  color: var(--color-text-on-light-primary);
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+.text-link-default-on-light:hover {
+  color: var(--color-accent-primary);
+  text-decoration: underline;
+}
+
+
+/* Card styling */
+.card-base {
+  padding: 1.5rem; /* p-6 */
+  border-radius: 0.5rem; /* rounded-lg */
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05); /* shadow-xl */
+  transition: all 0.3s ease-in-out;
+}
+.card-dark-bg {
+  /* Extends .card-base */
+  background-color: var(--color-bg-surface-primary);
+  border: 1px solid var(--color-border-dark-primary);
+}
+.card-dark-bg:hover {
+  border-color: var(--color-border-accent);
+}
+.card-dark-bg h3 {
+  font-size: 1.25rem; /* text-xl */
+  font-weight: 600; /* semibold */
+  color: var(--color-text-on-dark-primary);
+  margin-top: 1rem; /* mt-4 */
+  margin-bottom: 0.5rem; /* mb-2 */
+}
+.card-dark-bg p {
+  color: var(--color-text-on-dark-muted);
+}
+.card-dark-bg .emoji-icon { /* This was an old class, replaced by .emoji-halo for specificity */
+  filter: drop-shadow(0 0 5px var(--color-accent-primary));
+}
+
+.card-light-bg {
+  /* Extends .card-base */
+  background-color: var(--color-bg-surface-light);
+  border: 1px solid var(--color-border-light-primary);
+}
+.card-light-bg:hover {
+  border-color: var(--color-border-accent);
+}
+.card-light-bg h3 {
+  font-size: 1.25rem; /* text-xl */
+  font-weight: 600; /* semibold */
+  color: var(--color-text-on-light-primary);
+  margin-top: 1rem; /* mt-4 */
+  margin-bottom: 0.5rem; /* mb-2 */
+}
+.card-light-bg p {
+  color: var(--color-text-on-light-secondary);
+}
+.card-light-bg .emoji-icon { /* This was an old class, replaced by .emoji-halo for specificity */
+  filter: drop-shadow(0 0 5px var(--color-accent-secondary));
+}
+
+
+/* Status message styling */
+.status-message {
+  padding: 0.75rem; /* p-3 */
+  border-radius: 0.375rem; /* rounded-md */
+  font-size: 0.875rem; /* text-sm */
+  font-weight: 500; /* font-medium */
+  border-width: 1px;
+  border-style: solid;
+}
+.status-success {
+  background-color: var(--color-status-success-bg);
+  color: var(--color-status-success-text);
+  border-color: var(--color-status-success-border);
+}
+.status-error {
+  background-color: var(--color-status-error-bg);
+  color: var(--color-status-error-text);
+  border-color: var(--color-status-error-border);
+}
+.status-info {
+  background-color: var(--color-status-info-bg);
+  color: var(--color-status-info-text);
+  border-color: var(--color-status-info-border);
+}
+.status-loading {
+  background-color: var(--color-status-loading-bg);
+  color: var(--color-status-loading-text);
+  border-color: var(--color-status-loading-border);
+}
+
+/* Footer specific styles (remains dark) */
+.footer-dark {
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text-on-dark-muted);
+  padding-top: 3rem; /* py-12 (top) */
+  padding-bottom: 3rem; /* py-12 (bottom) */
+  border-top: 1px solid var(--color-border-dark-primary);
+}
+.footer-dark h5 {
+  font-weight: 600; /* semibold */
+  color: var(--color-text-on-dark-primary);
+  margin-bottom: 0.75rem; /* mb-3 */
+}
+.footer-dark a { /* Overrides default 'a' for footer context */
+  color: var(--color-text-on-dark-muted);
+  transition: color 0.3s ease-in-out;
+  text-decoration: none;
+}
+.footer-dark a:hover {
+  color: var(--color-accent-primary);
+  text-decoration: underline;
+}
+.footer-dark .brand-text-gradient {
+   background-image: linear-gradient(to right, var(--color-accent-primary), var(--color-accent-secondary));
+   -webkit-background-clip: text;
+   background-clip: text;
+   color: transparent;
+}
+
+/* Hero Background Image */
+.hero-background-image {
+  background-image: url('/assets/TrenchAssistant.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Recent Session Section Specific Styling */
+#recent-session-content {
+  min-height: 75vh; /* Increased height */
+  background-image: url('/assets/binary_code.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative; /* Establishes a stacking context */
+
+  /* Flexbox for centering content */
+  display: flex;
+  flex-direction: column; /* Stack content vertically if needed, though .max-w-xl is single child */
+  align-items: center; /* Horizontal centering for flex items */
+  justify-content: center; /* Vertical centering for flex items */
+  /* The class .section-bg-dark-gray-1 on the HTML element will provide a fallback bg color if image fails */
+  /* text-center is already on the HTML element for inline content */
+}
+
+/* Ensure content within recent-session-content is visually above the background image */
+/* and respects its own max-width and padding */
+#recent-session-content > .max-w-xl {
+  position: relative; /* Needed to apply z-index if parent didn't have one, good practice */
+  z-index: 1; /* Ensures this container and its children are on top of the section's background */
+  padding: 1rem; /* Restore padding, Tailwind's py-16 on section handles outer spacing */
+  width: 100%; /* Ensure it can take up to max-width */
+  /* mx-auto is on the element's class list, which works with text-align on parent for block,
+     but flex centering on parent is more robust for the block itself. */
+}
+
+/* Smooth transition for How It Works section */
+#how-it-works {
+  background: linear-gradient(to bottom,
+    var(--color-bg-secondary) 0%,   /* Start with the color of the Features section */
+    var(--color-bg-primary) 25%,    /* Transition to its own primary background color over 25% of height */
+    var(--color-bg-primary) 100%   /* Continue with its own primary background color */
+  );
+}
+
+/* Ensure text color is appropriate for the How It Works section's main background */
+#how-it-works h2 {
+  color: var(--color-text-on-dark-primary);
+}
+#how-it-works p {
+  color: var(--color-text-on-dark-muted);
+}
+
+/* Smooth transition for Limitations section */
+#limitations {
+  background: linear-gradient(to bottom,
+    var(--color-bg-primary) 0%,      /* Start with the color of the How It Works section */
+    var(--color-bg-secondary) 25%,   /* Transition to its own primary background color (dark-gray-1) over 25% of height */
+    var(--color-bg-secondary) 100%  /* Continue with its own primary background color */
+  );
+}
+
+/* Ensure text color is appropriate for the Limitations section's main background */
+/* These are already handled by .section-bg-dark-gray-1 h2 and p rules, and specific classes in Limitations.html */
+/* #limitations h2 { color: var(--color-text-on-dark-primary); } */
+/* #limitations p, #limitations ul { color: var(--color-text-on-dark-muted); } */
+
+/* Smooth transition for Roadmap section */
+#roadmap {
+  background: linear-gradient(to bottom,
+    var(--color-bg-secondary) 0%,  /* Start with Limitations section's end color */
+    var(--color-bg-primary) 25%,   /* Transition to its own primary background color (darkest) over 25% of height */
+    var(--color-bg-primary) 100%  /* Continue with its own primary background color */
+  );
+}
+/* Text colors for Roadmap are handled by its specific classes in Roadmap.html and .section-bg-darkest rules */

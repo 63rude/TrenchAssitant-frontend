@@ -1,0 +1,327 @@
+/* styles/color-logic.css */
+/* This file maps semantic roles to the color variables defined in styles/colors.css. */
+
+/* ========================================= */
+/* Page & Section Backgrounds                */
+/* ========================================= */
+
+.bg-page-primary {
+  background-color: var(--color-bg-primary);
+}
+.bg-page-secondary {
+  background-color: var(--color-bg-secondary);
+}
+.bg-page-tertiary {
+  background-color: var(--color-bg-tertiary);
+}
+
+.bg-surface-primary { /* For cards, modals on dark backgrounds */
+  background-color: var(--color-bg-surface-primary);
+}
+.bg-surface-secondary { /* For secondary surfaces on dark backgrounds */
+  background-color: var(--color-bg-surface-secondary);
+}
+
+.bg-page-light-primary { /* For light-themed sections/components */
+  background-color: var(--color-bg-light-primary);
+}
+.bg-page-light-secondary {
+  background-color: var(--color-bg-light-secondary);
+}
+.bg-surface-light { /* For cards, modals on light backgrounds */
+  background-color: var(--color-bg-surface-light);
+}
+
+/* ========================================= */
+/* Text Colors                               */
+/* ========================================= */
+
+/* Text on dark backgrounds */
+.text-color-on-dark-primary {
+  color: var(--color-text-on-dark-primary);
+}
+.text-color-on-dark-secondary {
+  color: var(--color-text-on-dark-secondary);
+}
+.text-color-on-dark-muted {
+  color: var(--color-text-on-dark-muted);
+}
+.text-color-on-dark-placeholder {
+  color: var(--color-text-on-dark-placeholder);
+}
+
+/* Text on light backgrounds */
+.text-color-on-light-primary {
+  color: var(--color-text-on-light-primary);
+}
+.text-color-on-light-secondary {
+  color: var(--color-text-on-light-secondary);
+}
+.text-color-on-light-muted {
+  color: var(--color-text-on-light-muted);
+}
+.text-color-on-light-placeholder {
+  color: var(--color-text-on-light-placeholder);
+}
+
+/* Accent text */
+.text-color-accent-primary {
+  color: var(--color-accent-primary);
+}
+.text-color-accent-secondary {
+  color: var(--color-accent-secondary);
+}
+.text-color-accent-tertiary {
+  color: var(--color-accent-tertiary);
+}
+.text-color-on-accent-bg { /* For text on an accent-colored background */
+  color: var(--color-text-on-accent);
+}
+
+/* Gradient Accent Text */
+.text-gradient-accent {
+  background-image: linear-gradient(to right, var(--color-accent-primary), var(--color-accent-secondary), var(--color-accent-tertiary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+
+/* ========================================= */
+/* Buttons                                   */
+/* ========================================= */
+/* Base button styles (padding, font, etc.) should be defined elsewhere or with Tailwind. */
+/* These classes primarily handle color logic. */
+
+.btn-primary {
+  background-color: var(--color-accent-primary);
+  color: var(--color-text-on-accent);
+  border: 1px solid var(--color-accent-primary);
+}
+.btn-primary:hover {
+  background-color: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
+}
+.btn-primary:active {
+  background-color: var(--color-accent-active);
+  border-color: var(--color-accent-active);
+}
+
+.btn-secondary {
+  background-color: var(--color-accent-secondary);
+  color: var(--color-text-on-accent);
+  border: 1px solid var(--color-accent-secondary);
+}
+.btn-secondary:hover {
+  background-color: var(--color-accent-tertiary); /* Lighter for hover on secondary */
+  border-color: var(--color-accent-tertiary);
+}
+
+.btn-outline-primary {
+  background-color: transparent;
+  color: var(--color-accent-primary);
+  border: 1px solid var(--color-accent-primary);
+}
+.btn-outline-primary:hover {
+  background-color: rgba(0, 255, 153, 0.1); /* Accent primary with low opacity */
+  color: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
+}
+
+.btn-outline-on-light {
+  background-color: transparent;
+  color: var(--color-accent-primary); /* Neon green can work on light */
+  border: 1px solid var(--color-accent-primary);
+}
+.btn-outline-on-light:hover {
+  background-color: rgba(0, 255, 153, 0.1);
+  color: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
+}
+
+
+/* ========================================= */
+/* Input Fields                              */
+/* ========================================= */
+
+.input-field-dark {
+  background-color: var(--color-bg-surface-primary);
+  color: var(--color-text-on-dark-secondary);
+  border: 1px solid var(--color-border-dark-primary);
+}
+.input-field-dark::placeholder {
+  color: var(--color-text-on-dark-placeholder);
+}
+.input-field-dark:focus {
+  border-color: var(--color-border-accent);
+  box-shadow: 0 0 0 2px var(--color-accent-primary); /* Mimics focus ring */
+}
+
+.input-field-light {
+  background-color: var(--color-bg-surface-light);
+  color: var(--color-text-on-light-primary);
+  border: 1px solid var(--color-border-light-primary);
+}
+.input-field-light::placeholder {
+  color: var(--color-text-on-light-placeholder);
+}
+.input-field-light:focus {
+  border-color: var(--color-border-accent);
+  box-shadow: 0 0 0 2px var(--color-accent-primary);
+}
+
+/* ========================================= */
+/* Borders                                   */
+/* ========================================= */
+
+.border-color-dark-primary {
+  border-color: var(--color-border-dark-primary);
+}
+.border-color-dark-secondary {
+  border-color: var(--color-border-dark-secondary);
+}
+.border-color-light-primary {
+  border-color: var(--color-border-light-primary);
+}
+.border-color-light-secondary {
+  border-color: var(--color-border-light-secondary);
+}
+.border-color-accent {
+  border-color: var(--color-border-accent);
+}
+
+/* ========================================= */
+/* Links                                     */
+/* ========================================= */
+
+.link-accent-primary {
+  color: var(--color-accent-primary);
+}
+.link-accent-primary:hover {
+  color: var(--color-accent-hover);
+}
+
+.link-text-on-dark { /* For less prominent links on dark backgrounds */
+  color: var(--color-text-on-dark-secondary);
+}
+.link-text-on-dark:hover {
+  color: var(--color-accent-primary);
+}
+
+.link-text-on-light { /* For less prominent links on light backgrounds */
+  color: var(--color-text-on-light-secondary);
+}
+.link-text-on-light:hover {
+  color: var(--color-accent-primary);
+}
+
+/* ========================================= */
+/* Status Messages & Indicators              */
+/* ========================================= */
+/* These classes are for the container of the status message. */
+/* Assumes padding, font-size etc. are handled by a base .status-message class or Tailwind. */
+
+.status-message-success {
+  background-color: var(--color-status-success-bg);
+  color: var(--color-status-success-text);
+  border: 1px solid var(--color-status-success-border);
+}
+
+.status-message-error {
+  background-color: var(--color-status-error-bg);
+  color: var(--color-status-error-text);
+  border: 1px solid var(--color-status-error-border);
+}
+
+.status-message-warning {
+  background-color: var(--color-status-warning-bg);
+  color: var(--color-status-warning-text);
+  border: 1px solid var(--color-status-warning-border);
+}
+
+.status-message-info {
+  background-color: var(--color-status-info-bg);
+  color: var(--color-status-info-text);
+  border: 1px solid var(--color-status-info-border);
+}
+
+.status-message-loading {
+  background-color: var(--color-status-loading-bg);
+  color: var(--color-status-loading-text);
+  border: 1px solid var(--color-status-loading-border);
+}
+
+/* Specific component roles - can be expanded */
+.bg-hero-section {
+  background-color: var(--color-bg-primary); /* Example: Hero uses darkest bg */
+}
+
+/* Dark Themed Navbar */
+.bg-navbar-dark-theme {
+  background-color: var(--color-bg-secondary);
+  border-bottom: 1px solid var(--color-border-dark-primary);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+              0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Tailwind's shadow-lg */
+}
+
+.text-navbar-dark-theme-brand {
+  color: var(--color-text-on-dark-primary);
+}
+
+.link-navbar-dark-theme {
+  color: var(--color-text-on-dark-secondary);
+}
+
+.link-navbar-dark-theme:hover {
+  color: var(--color-accent-primary);
+}
+
+/* Removed light theme navbar semantic classes */
+
+.bg-footer-dark-theme {
+  background-color: var(--color-bg-secondary);
+  border-top: 1px solid var(--color-border-dark-primary);
+}
+.text-footer-dark-theme-heading {
+  color: var(--color-text-on-dark-primary);
+}
+.text-footer-dark-theme-body {
+  color: var(--color-text-on-dark-muted);
+}
+.link-footer-dark-theme {
+  color: var(--color-text-on-dark-muted);
+}
+.link-footer-dark-theme:hover {
+  color: var(--color-accent-primary);
+}
+
+.card-dark-theme {
+  background-color: var(--color-bg-surface-primary);
+  border: 1px solid var(--color-border-dark-primary);
+}
+.card-dark-theme:hover {
+  border-color: var(--color-border-accent);
+}
+.card-dark-theme-title {
+  color: var(--color-text-on-dark-primary);
+}
+.card-dark-theme-text {
+  color: var(--color-text-on-dark-muted);
+}
+
+.card-light-theme {
+  background-color: var(--color-bg-surface-light);
+  border: 1px solid var(--color-border-light-primary);
+}
+.card-light-theme:hover {
+  border-color: var(--color-border-accent);
+}
+.card-light-theme-title {
+  color: var(--color-text-on-light-primary);
+}
+.card-light-theme-text {
+  color: var(--color-text-on-light-secondary);
+}
