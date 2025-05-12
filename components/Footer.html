@@ -1,0 +1,49 @@
+<footer class="footer-dark py-12 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+    <!-- Brand and About -->
+    <div class="md:col-span-1">
+      <div class="flex items-center mb-4">
+        <img src="/assets/logo.png" alt="TrenchAssistant Logo" class="navbar-logo h-10 w-10 mr-3">
+        <span class="font-bold text-xl brand-text-gradient">TrenchAssistant</span>
+      </div>
+      <p class="text-sm text-color-on-dark-muted">
+        Analyze your wallet’s memecoin trading performance with precision. Understand your P&L and make data-driven decisions.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div>
+      <h5 class="text-footer-dark-theme-heading text-lg font-semibold mb-4">Quick Links</h5>
+      <ul class="space-y-2">
+        <li><a href="/index.html" class="link-footer-dark-theme text-sm">Home</a></li>
+        <li><a href="/tokenomics.html" class="link-footer-dark-theme text-sm">Tokenomics</a></li>
+        <li><a href="/roadmap.html" class="link-footer-dark-theme text-sm">Roadmap</a></li>
+        <li>
+          <a href="https://x.com/TrenchAssistant" target="_blank" rel="noopener noreferrer" class="link-footer-dark-theme text-sm flex items-center">
+            <i class="fa-brands fa-x-twitter mr-2"></i>Follow on X
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Legal -->
+    <div>
+      <h5 class="text-footer-dark-theme-heading text-lg font-semibold mb-4">Legal</h5>
+      <ul class="space-y-2">
+        <li><a href="#" class="link-footer-dark-theme text-sm">Privacy Policy (TBD)</a></li>
+        <li><a href="#" class="link-footer-dark-theme text-sm">Terms of Service (TBD)</a></li>
+        <li><p class="text-sm text-color-on-dark-muted">Not Financial Advice.</p></li>
+      </ul>
+    </div>
+  </div>
+  <div class="mt-8 pt-8 border-t border-color-dark-secondary text-center">
+    <p class="text-sm text-color-on-dark-muted">
+      &copy; <span id="currentYear"></span> TrenchAssistant. All rights reserved.
+    </p>
+  </div>
+  <script>
+    if (document.getElementById('currentYear')) {
+      document.getElementById('currentYear').textContent = new Date().getFullYear();
+    }
+  </script>
+</footer>

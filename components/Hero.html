@@ -1,0 +1,45 @@
+<section id="hero-content" class="hero-background-image section-bg-darkest py-20 md:py-32 px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center text-center min-h-screen">
+  <div class="max-w-2xl mx-auto">
+    <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 leading-tight text-gradient-accent neon-title">
+      TrenchAssistant
+    </h1>
+    <p class="text-xl sm:text-2xl mb-10 text-color-on-dark-muted"> 
+      Your stats-savvy comrade in the trenches
+    </p>
+    
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8 w-full max-w-lg mx-auto">
+      <input 
+        id="walletAddressInput"
+        type="text" 
+        placeholder="Enter wallet address (e.g., 0x...)" 
+        class="input-dark-bg"
+      >
+      <button 
+        id="runAnalysisBtn"
+        class="btn-neon w-full sm:w-auto flex-shrink-0 text-lg"
+      >
+        Run Analysis
+      </button>
+    </div>
+
+    <div id="hero-status-indicator-container" class="w-full max-w-md mx-auto min-h-[80px]">
+      <!-- Status messages will be dynamically injected here by session.js -->
+    </div>
+    <div id="hero-session-logs-container" class="w-full max-w-md mx-auto hidden">
+      <h4 class="font-semibold text-color-accent-primary mb-2">Logs:</h4>
+      <pre id="hero-session-logs-content" class="text-color-on-dark-secondary"></pre>
+    </div>
+    <div id="hero-session-results-container" class="w-full max-w-md mx-auto hidden">
+      <h4 class="font-semibold text-color-accent-primary mb-2">Results:</h4>
+      <pre id="hero-session-results-content" class="text-color-on-dark-secondary"></pre>
+    </div>
+    
+  </div>
+  <div class="mt-16">
+     <a href="#recent-session-container" class="link-accent-primary animate-bounce">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-10 h-10">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+        </svg>
+      </a>
+  </div>
+</section>

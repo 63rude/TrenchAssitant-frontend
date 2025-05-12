@@ -1,0 +1,82 @@
+:root {
+  /* ----------------------------------------- */
+  /* Background Colors                         */
+  /* ----------------------------------------- */
+  /* Base page backgrounds */
+  --color-bg-primary: #000000;       /* Deepest black, primary page background */
+  --color-bg-secondary: #0A0A0A;     /* Very dark gray, for layered sections */
+  --color-bg-tertiary: #121212;      /* Dark gray, for other section variations */
+
+  /* Surface colors for components like cards, modals, input fields */
+  --color-bg-surface-primary: #1A1A1A; /* Primary surface color on dark backgrounds */
+  --color-bg-surface-secondary: #242424;/* Secondary surface, slightly lighter */
+  
+  /* Light theme backgrounds (for specific components or sections if needed) */
+  --color-bg-light-primary: #FFFFFF;
+  --color-bg-light-secondary: #F3F4F6; /* Very light gray for section backgrounds on light theme */
+  --color-bg-surface-light: #FFFFFF;   /* For light cards, light inputs */
+
+  /* ----------------------------------------- */
+  /* Text Colors                               */
+  /* ----------------------------------------- */
+  /* Text on dark backgrounds */
+  --color-text-on-dark-primary: #FFFFFF;   /* High contrast, bright white */
+  --color-text-on-dark-secondary: #E0E0E0; /* Softer white, standard text */
+  --color-text-on-dark-muted: #a0a0a0;     /* Dimmer gray, for less important text */
+  --color-text-on-dark-placeholder: #707070;/* For input placeholders on dark */
+
+  /* Text on light backgrounds */
+  --color-text-on-light-primary: #111827;  /* Dark gray for primary text */
+  --color-text-on-light-secondary: #4B5563;/* Medium gray for secondary text */
+  --color-text-on-light-muted: #6B7280;    /* Lighter gray for less important text */
+  --color-text-on-light-placeholder: #9CA3AF;/* For input placeholders on light */
+
+  /* ----------------------------------------- */
+  /* Accent Colors (Neon Focus)                */
+  /* ----------------------------------------- */
+  --color-accent-primary: #00FF99;   /* Bright neon green - primary interactive elements */
+  --color-accent-secondary: #33FFBB; /* Slightly different neon green - secondary accents */
+  --color-accent-tertiary: #66FFDD;  /* Lighter neon green - tertiary accents or highlights */
+  --color-accent-hover: #00E68A;     /* Darker shade for primary accent hover */
+  --color-accent-active: #00CC7A;    /* Even darker for primary accent active/pressed */
+
+  /* Text color for elements on accent backgrounds */
+  --color-text-on-accent: #000000;   /* Black text for high contrast on neon green */
+
+  /* ----------------------------------------- */
+  /* Border Colors                             */
+  /* ----------------------------------------- */
+  --color-border-dark-primary: #333333;   /* Standard border on dark surfaces */
+  --color-border-dark-secondary: #444444; /* Slightly lighter border on dark */
+  --color-border-light-primary: #D1D5DB;  /* Standard border on light surfaces */
+  --color-border-light-secondary: #E5E7EB;/* Slightly lighter border on light */
+  --color-border-accent: var(--color-accent-primary); /* Border for focused/accented elements */
+
+  /* ----------------------------------------- */
+  /* Status Colors                             */
+  /* ----------------------------------------- */
+  /* Success */
+  --color-status-success-text: #22C55E;       /* Green text for success messages */
+  --color-status-success-bg: rgba(34, 197, 94, 0.1); /* Light green background */
+  --color-status-success-border: #22C55E;    /* Green border */
+
+  /* Error / Danger */
+  --color-status-error-text: #EF4444;         /* Red text for error messages */
+  --color-status-error-bg: rgba(239, 68, 68, 0.1); /* Light red background */
+  --color-status-error-border: #EF4444;      /* Red border */
+
+  /* Warning */
+  --color-status-warning-text: #F59E0B;       /* Amber text for warnings */
+  --color-status-warning-bg: rgba(245, 158, 11, 0.1);/* Light amber background */
+  --color-status-warning-border: #F59E0B;    /* Amber border */
+
+  /* Info */
+  --color-status-info-text: #3B82F6;          /* Blue text for informational messages */
+  --color-status-info-bg: rgba(59, 130, 246, 0.1); /* Light blue background */
+  --color-status-info-border: #3B82F6;       /* Blue border */
+
+  /* Loading (can use accent or a neutral) */
+  --color-status-loading-text: var(--color-accent-secondary);
+  --color-status-loading-bg: rgba(51, 255, 187, 0.1);
+  --color-status-loading-border: var(--color-accent-secondary);
+}
