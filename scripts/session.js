@@ -4,7 +4,7 @@ import { updateHeroStatusIndicator, updateRecentSessionStatus } from './statusIn
 import { fetchAndDisplayLogs } from './logs.js';
 import { fetchAndDisplayResults } from './results.js';
 
-const API_BASE = 'http://127.0.0.1:8000';
+const API_BASE = 'https://trenchassistant-python.onrender.com';
 let pollIntervalId = null;
 
 console.log('[session.js] Imports loaded, API_BASE and pollIntervalId initialized.');
