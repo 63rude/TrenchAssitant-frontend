@@ -1,4 +1,4 @@
-const API_BASE = 'http://127.0.0.1:8000'; // Use consistent API root
+const API_BASE = 'https://trenchassistant-python.onrender.com'; // Use consistent API root
 
 /**
  * Fetches and displays session logs.
