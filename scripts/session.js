@@ -92,8 +92,9 @@ function initializeHeroSectionInteractions() {
       runAnalysisButton.disabled = true;
       updateHeroStatusIndicator('loading', 'Starting Session...', 'Initializing analysis for your wallet.');
 
-      if (heroLogsContent) heroLogsContent.textContent = '';
-      if (heroResultsContent) heroResultsContent.textContent = '';
+      if (heroLogsContent) heroLogsContent.innerHTML = '';
+      if (heroResultsContent) heroResultsContent.innerHTML = '';
+
       if (heroLogsContainer) heroLogsContainer.classList.add('hidden');
       if (heroResultsContainer) heroResultsContainer.classList.add('hidden');
 

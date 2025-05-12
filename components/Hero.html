@@ -25,21 +25,23 @@
     <div id="hero-status-indicator-container" class="w-full max-w-md mx-auto min-h-[80px]">
       <!-- Status messages will be dynamically injected here by session.js -->
     </div>
-    <div id="hero-session-logs-container" class="w-full max-w-md mx-auto hidden">
+
+    <div id="hero-session-logs-container" class="w-full max-w-2xl mx-auto hidden">
       <h4 class="font-semibold text-color-accent-primary mb-2">Logs:</h4>
-      <pre id="hero-session-logs-content" class="text-color-on-dark-secondary"></pre>
+      <pre id="hero-session-logs-content" class="text-sm text-color-on-dark-secondary bg-gray-900 p-3 rounded-md overflow-auto max-h-72"></pre>
     </div>
-    <div id="hero-session-results-container" class="w-full max-w-md mx-auto hidden">
-      <h4 class="font-semibold text-color-accent-primary mb-2">Results:</h4>
-      <pre id="hero-session-results-content" class="text-color-on-dark-secondary"></pre>
+
+    <div id="hero-session-results-container" class="w-full max-w-2xl mx-auto hidden">
+      <h4 class="font-semibold text-color-accent-primary mb-2 text-lg">Results:</h4>
+      <div id="hero-session-results-content" class="text-sm text-gray-300 space-y-6"></div>
     </div>
-    
   </div>
+
   <div class="mt-16">
-     <a href="#recent-session-container" class="link-accent-primary animate-bounce">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-10 h-10">
-          <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-        </svg>
-      </a>
+    <a href="#recent-session-container" class="link-accent-primary animate-bounce">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-10 h-10">
+        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+      </svg>
+    </a>
   </div>
 </section>
