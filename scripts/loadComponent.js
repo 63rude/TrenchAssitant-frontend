@@ -65,3 +65,6 @@ export async function loadComponent(componentPath, containerId) {
     }
   }
 }
+
+window.loadComponent = loadComponent;
+
