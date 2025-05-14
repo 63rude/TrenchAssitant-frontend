@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TrenchAssistant – Docs</title>
+
+  <!-- Tailwind & Fonts -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles/colors.css" />
+  <link rel="stylesheet" href="/styles/color-logic.css" />
+  <link rel="stylesheet" href="/styles/custom.css" />
+  <link rel="icon" href="/assets/cropped_image.png" type="image/png" />
+
+  <!-- Alpine.js -->
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
+  <!-- Loader Scripts -->
+  <script src="/scripts/loadPageShell.js" type="module" defer></script>
+  <script src="/scripts/loadComponent.js" type="module"></script>
+</head>
+
+<body class="bg-page-primary text-content-primary font-sans leading-relaxed" x-data="{ section: 'tokenomics' }">
+
+  <!-- Navbar -->
+  <div id="navbar-container"></div>
+
+  <!-- Main Layout -->
+  <div class="flex min-h-screen pt-6 px-4 sm:px-8">
+    
+    <!-- Sidebar -->
+    <aside class="w-56 mr-6 hidden md:block">
+      <nav class="space-y-2 sticky top-10 text-sm font-medium">
+        <button
+          @click="
+            section = 'roadmap';
+            history.replaceState(null, '', '#roadmap');
+            loadComponent('/pages/Roadmap.html', 'dynamic-content');
+            document.title = 'TrenchAssistant – Roadmap';
+          "
+          :class="section === 'roadmap'
+            ? 'bg-color-accent text-color-on-dark-primary'
+            : 'hover:bg-color-accent-dimmed text-color-on-dark-muted'"
+          class="block w-full py-2 px-4 rounded text-left transition-all"
+        >
+          <i class="fas fa-map mr-2"></i> Roadmap
+        </button>
+
+        <button
+          @click="
+            section = 'tokenomics';
+            history.replaceState(null, '', '#tokenomics');
+            loadComponent('/pages/Tokenomics.html', 'dynamic-content');
+            document.title = 'TrenchAssistant – Tokenomics';
+          "
+          :class="section === 'tokenomics'
+            ? 'bg-color-accent text-color-on-dark-primary'
+            : 'hover:bg-color-accent-dimmed text-color-on-dark-muted'"
+          class="block w-full py-2 px-4 rounded text-left transition-all"
+        >
+          <i class="fas fa-coins mr-2"></i> Tokenomics
+        </button>
+      </nav>
+    </aside>
+
+    <!-- Dynamic Content Container -->
+    <main class="flex-1 w-full max-w-6xl">
+      <div id="dynamic-content" class="transition-opacity duration-200"></div>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <div id="footer-container" class="mt-12"></div>
+
+  <!-- Section Load Based on URL Hash -->
+  <script type="module">
+    import { loadComponent } from '/scripts/loadComponent.js';
+
+    const loadInitialSection = () => {
+      const hash = location.hash.replace('#', '').toLowerCase();
+      const validSections = ['tokenomics', 'roadmap'];
+      const section = validSections.includes(hash) ? hash : 'tokenomics';
+
+      const alpineRoot = document.querySelector('[x-data]');
+      if (alpineRoot && alpineRoot.__x && alpineRoot.__x.$data) {
+        alpineRoot.__x.$data.section = section;
+      }
+
+      loadComponent(`/pages/${section.charAt(0).toUpperCase() + section.slice(1)}.html`, 'dynamic-content');
+      document.title = `TrenchAssistant – ${section.charAt(0).toUpperCase() + section.slice(1)}`;
+    };
+
+    window.addEventListener('DOMContentLoaded', loadInitialSection);
+    window.addEventListener('hashchange', loadInitialSection);
+  </script>
+</body>
+</html>
