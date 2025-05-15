@@ -508,3 +508,17 @@ a:hover {
   );
 }
 /* Text colors for Roadmap are handled by its specific classes in Roadmap.html and .section-bg-darkest rules */
+
+:target {
+  background: transparent !important;
+  box-shadow: none !important;
+  outline: none !important;
+  scroll-margin-top: 6rem; /* Prevents title from touching top */
+}
+
+#context p,
+#product p,
+#roadmap p,
+#tokenomics p {
+  max-width: none;
+}

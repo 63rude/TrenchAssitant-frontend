@@ -1,6 +1,6 @@
 <nav class="bg-navbar-dark-theme py-4" x-data="{ isOpen: false }">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-center justify-start justify-between md:justify-start w-full">
+    <div class="flex items-center justify-between w-full">
       <!-- Logo + Brand -->
       <div class="flex items-center">
         <a href="/index.html" class="flex-shrink-0 flex items-center">
@@ -15,8 +15,7 @@
           <a href="/index.html#hero-content" class="px-3 py-2 rounded-md text-base font-medium link-navbar-dark-theme hover:bg-[var(--color-bg-surface-secondary)] transition-colors duration-300">Home</a>
           <a href="/index.html#how-it-works" class="px-3 py-2 rounded-md text-base font-medium link-navbar-dark-theme hover:bg-[var(--color-bg-surface-secondary)] transition-colors duration-300">How it works</a>
           <a href="/index.html#limitations" class="px-3 py-2 rounded-md text-base font-medium link-navbar-dark-theme hover:bg-[var(--color-bg-surface-secondary)] transition-colors duration-300">Limitations</a>
-          <a href="/docs.html#roadmap" class="px-3 py-2 rounded-md text-base font-medium link-navbar-dark-theme hover:bg-[var(--color-bg-surface-secondary)] transition-colors duration-300">Roadmap</a>
-          <a href="/docs.html#tokenomics" class="px-3 py-2 rounded-md text-base font-medium link-navbar-dark-theme hover:bg-[var(--color-bg-surface-secondary)] transition-colors duration-300">Tokenomics</a>
+          <a href="/litepaper.html" class="px-3 py-2 rounded-md text-base font-medium link-navbar-dark-theme hover:bg-[var(--color-bg-surface-secondary)] transition-colors duration-300">Litepaper</a>
           <a href="https://x.com/TrenchAssistant" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded-md text-base font-medium link-navbar-dark-theme hover:bg-[var(--color-bg-surface-secondary)] transition-colors duration-300 flex items-center space-x-2 group">
             <i class="fa-brands fa-x-twitter text-lg leading-none align-middle"></i>
             <span class="text-lg leading-none align-middle">X.com</span>
@@ -30,10 +29,10 @@
                 class="inline-flex items-center justify-center p-2 rounded-md text-color-on-dark-secondary hover:text-color-accent-primary bg-[var(--color-bg-surface-primary)] hover:bg-[var(--color-bg-surface-secondary)] focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[var(--color-accent-primary)]"
                 aria-controls="mobile-menu" aria-expanded="false">
           <span class="sr-only">Open main menu</span>
-          <svg :class="{ 'hidden': isOpen, 'block': !isOpen }" class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <svg :class="{ 'hidden': isOpen, 'block': !isOpen }" class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
-          <svg :class="{ 'block': isOpen, 'hidden': !isOpen }" class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <svg :class="{ 'block': isOpen, 'hidden': !isOpen }" class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
@@ -55,8 +54,7 @@
       <a href="/index.html#hero-content" class="block px-3 py-2 rounded-md text-base font-medium link-navbar-dark-theme hover:bg-[var(--color-bg-surface-secondary)] transition-colors duration-300">Home</a>
       <a href="/index.html#how-it-works" class="block px-3 py-2 rounded-md text-base font-medium link-navbar-dark-theme hover:bg-[var(--color-bg-surface-secondary)] transition-colors duration-300">How it works</a>
       <a href="/index.html#limitations" class="block px-3 py-2 rounded-md text-base font-medium link-navbar-dark-theme hover:bg-[var(--color-bg-surface-secondary)] transition-colors duration-300">Limitations</a>
-      <a href="/docs.html#roadmap" class="block px-3 py-2 rounded-md text-base font-medium link-navbar-dark-theme hover:bg-[var(--color-bg-surface-secondary)] transition-colors duration-300">Roadmap</a>
-      <a href="/docs.html#tokenomics" class="block px-3 py-2 rounded-md text-base font-medium link-navbar-dark-theme hover:bg-[var(--color-bg-surface-secondary)] transition-colors duration-300">Tokenomics</a>
+      <a href="/litepaper.html" class="block px-3 py-2 rounded-md text-base font-medium link-navbar-dark-theme hover:bg-[var(--color-bg-surface-secondary)] transition-colors duration-300">Litepaper</a>
       <a href="https://x.com/TrenchAssistant" target="_blank" rel="noopener noreferrer" class="block px-3 py-2 rounded-md text-base font-medium link-navbar-dark-theme hover:bg-[var(--color-bg-surface-secondary)] transition-colors duration-300 flex items-center space-x-2 group">
         <i class="fa-brands fa-x-twitter text-lg leading-none align-middle"></i>
         <span class="text-lg leading-none align-middle">X.com</span>
@@ -64,3 +62,17 @@
     </div>
   </div>
 </nav>
+
+<!-- Scroll-to-anchor fix for incoming links -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    if (window.location.hash) {
+      const el = document.querySelector(window.location.hash);
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 100);
+      }
+    }
+  });
+</script>

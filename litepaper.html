@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TrenchAssistant – Litepaper</title>
+
+  <!-- Tailwind & Fonts -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles/colors.css" />
+  <link rel="stylesheet" href="/styles/color-logic.css" />
+  <link rel="stylesheet" href="/styles/custom.css" />
+  <link rel="icon" href="/assets/cropped_image.png" type="image/png" />
+
+  <!-- Alpine.js -->
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
+    <style>
+    :target {
+      scroll-margin-top: 6rem;
+      background: transparent !important;
+      box-shadow: none !important;
+      outline: none !important;
+      border: none !important;
+    }
+
+    section {
+      margin-top: 6rem;
+    }
+
+    section h2 {
+      margin-bottom: 1.5rem;
+    }
+
+    section h3 {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    section p {
+      margin-bottom: 1.25rem;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+
+<body class="bg-page-primary text-content-primary font-sans leading-relaxed min-h-screen flex flex-col">
+  <!-- Navbar -->
+  <div id="navbar-container"></div>
+
+  <!-- Main Layout -->
+  <div class="flex flex-1 pt-6 px-4 sm:px-8 max-w-screen-xl w-full mx-auto">
+
+    <!-- Sidebar Navigation -->
+    <aside class="w-56 mr-6 hidden md:block">
+      <nav class="space-y-2 sticky top-10 text-sm font-medium">
+        <a href="#context" class="block w-full py-2 px-4 rounded text-left transition-all hover:bg-color-accent-dimmed text-color-on-dark-muted">🧱 Context</a>
+        <a href="#product" class="block w-full py-2 px-4 rounded text-left transition-all hover:bg-color-accent-dimmed text-color-on-dark-muted">🛠️ Product</a>
+        <a href="#roadmap" class="block w-full py-2 px-4 rounded text-left transition-all hover:bg-color-accent-dimmed text-color-on-dark-muted">🗺️ Roadmap</a>
+        <a href="#tokenomics" class="block w-full py-2 px-4 rounded text-left transition-all hover:bg-color-accent-dimmed text-color-on-dark-muted">💰 Tokenomics</a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 w-full space-y-16 pb-16">
+
+      <!-- Context -->
+      <section id="context">
+        <h2 class="text-3xl font-bold text-gradient-accent mb-4">Context – The Birth of Trench Assistant</h2>
+        <p class="text-color-on-dark-muted leading-relaxed">Trench Assistant borns from the shared mission of two traders 🧑‍💻🧑‍💻 with an academic background in data analysis and combinatorics, immersed in the crypto space since 2021. We’ve spent years in the trenches — not just watching charts 📉 but actively navigating every kind of market condition, trading obscure tokens, and constantly searching for an edge in this difficult environment. We’re not spectators; we’re part of the game 🎮. We know how critical it is to move with purpose and we’ve been working on a way to apply our technical knowledge and analytical mindset to extract real alpha 🐺 from the noise.</p>
+        <p class="text-color-on-dark-muted leading-relaxed">Our mission is simple: to build a tool designed for traders like us. Trench Assistant is developed to deliver actionable, data-driven, and, above all, highly personalized insights using statistical analysis, helping traders make informed decisions in an environment often driven by sentiment and hype 📢. In this space, even a small edge can be crucial for surviving and winning 🏆, and that’s why we’re here: to provide a real tool for the ones still grinding in the trenches.</p>
+        <p class="text-color-on-dark-muted leading-relaxed">Building meaningful trading statistics in this chaotic environment is notoriously difficult 🤯. The sheer number of variables — from volatile market conditions to shifting narratives and liquidity traps 🎣 — makes it nearly impossible to apply a one-size-fits-all model. So we flipped the script 🔄. Trench Assistant doesn’t try to generalize; it adapts. It doesn’t give you templated metrics; it gives you context. We tailor our tool to each individual trader by analyzing their historical trades, identifying patterns in behavior, and cross-referencing that with macro-level crypto conditions. For example, your raw win rate might mean little on its own — but knowing how that rate changes depending on BTC position with respect to your preferred MA, its RSI, the relative strength of SOL, or how a token’s volume compares to the average of similarly aged and sized tokens during that same timeframe? That’s alpha ✨.</p>
+      </section>
+
+      <!-- Product -->
+      <section id="product">
+        <h2 class="text-3xl font-bold text-gradient-accent mb-4">Product</h2>
+        <p class="text-color-on-dark-muted leading-relaxed">Trench Assistant is a personalized analytics tool designed to help crypto traders gain clarity on their own behavior by identifying hidden patterns 🔍 and contextual triggers 🎯 that influence profitability. By simply entering a wallet address, users can generate a custom statistical profile based on their trading history 📈. The tool surfaces behavioral trends and correlates them with broader market conditions — helping users understand not just their past actions and results, but how those relate to external factors.</p>
+        <p class="text-color-on-dark-muted leading-relaxed">At the heart of our approach is the belief that only you truly understand your own trading style. Some traders follow structured patterns 📊. Others buy into narratives 📢. Some ape after a tweet 🐒. For this reason, generic data sets not only fail to give you an advantage — they can even lead you in the wrong direction. Whatever drives your decisions, Trench Assistant is built to help you make sense of it — not with one-size-fits-all metrics, but with actionable insights derived by your behavior, your timing ⏱️, and your edge.</p>
+        <p class="text-color-on-dark-muted leading-relaxed">The product provides deep, adaptive analytics powered by multivariate statistics and artificial intelligence 🤖. By analyzing how multiple variables — like market structure, asset correlations, and personal trading behavior influence your trades’ outcome, Trench Assistant delivers insights that go beyond surface-level stats. The tool is able to show how your profitability shifts depending on several conditions, such as the value of any TradingView indicator, on-chain data and token characteristics — giving you a probabilistic range of expected outcomes under specific conditions 🎲.</p>
+        <p class="text-color-on-dark-muted leading-relaxed">Trench Assistant will be accessible through our terminal 💻 starting seven days after the token launch 🚀. Access will require only token ownership — no staking, no lock-ups. This approach allows us to monitor real usage, estimate computational demand, and fine-tune performance while keeping access as open as possible. Just enter a wallet address — no wallet connection required, and no exposure to smart contract risk. If it holds the required amount of tokens, the analysis runs instantly. Additionally, it will be possible to analyze other addresses beyond your own. This feature will inevitably require proof of token ownership and connection to the terminal 🔑.</p>
+        <p class="text-color-on-dark-muted leading-relaxed">To offer a glimpse of what’s coming, we’ve launched a basic demo version on our website. It’s intentionally minimal, showcasing only foundational features ⚒️ to demonstrate the core mechanics, while incentivizing token ownership to access useful features 💎. On the demo terminal, users can analyze up to 50 transactions per wallet, with a maximum of 1 request per address. These limits help us reserve API bandwidth and computing power for token holders, ensuring they receive the smoothest and most responsive experience. If you encounter any issues while trying to use the demo, please contact us on our social channels 📬.</p>
+      </section>
+
+      <!-- Roadmap -->
+      <section id="roadmap">
+        <h2 class="text-3xl font-bold text-gradient-accent mb-4">Roadmap</h2>
+        <h3 class="text-xl font-semibold text-color-on-dark-primary mb-2">Step One: Terminal Opening – Data</h3>
+        <p class="text-color-on-dark-muted leading-relaxed">The terminal will be unlocked 🔓, giving token holders access to all core features, already developed and operational. Through the terminal, users will be able to perform multivariate statistical analysis using up to 7 (for now) variables simultaneously 📊. These variables range from technical indicators to on-chain data, and will continuously expand over time. Users can further customize the analysis by setting parameters like the number of trades to consider, excluding outliers, skipping weekends, and more.</p>
+        <p class="text-color-on-dark-muted leading-relaxed">You’ll simply enter your address 🧾, and if it holds the required token amount (see Tokenomics section), the analysis will be performed instantly ⚡. Alternatively, by connecting your wallet to verify token ownership, you’ll unlock the ability to analyze any wallet — making it possible to extract insights from profitable addresses. Terminal usage will be unlimited for eligible users and addresses.</p>
+
+        <h3 class="text-xl font-semibold text-color-on-dark-primary mb-2">Step Two: Terminal Evolution – Token-Specific & Social Metrics</h3>
+        <p class="text-color-on-dark-muted leading-relaxed">In this phase, we’ll introduce a new layer of functionality focused on uncovering hidden insights related to individual tokens 🔍. One of the key additions will be the integration of social engagement metrics, a feature already in advanced development that we are currently tuning by using AI to effectively identify and filter out artificial activity, to provide a reliable engagement indicator 📢. Additionally, we’re building tools to analyze other wallets that hold a specific token, identifying how many of them are profitable and classified as smart money. These capabilities are meant to empower traders with a more complete system, combining the personalized profitability metrics based on the external environment with these new token-specific characteristics.</p>
+
+        <h3 class="text-xl font-semibold text-color-on-dark-primary mb-2">Step Three: Continuous Expansion – From Data</h3>
+        <p class="text-color-on-dark-muted leading-relaxed">As we continue to refine and optimize existing features 🛠️, new tools will be added to further enhance the platform. For wallets with a significant trading history, we plan to implement a feature for suggested optimal position sizing based on the Kelly Criterion, calibrated using each user’s personal trading performance 📐.</p>
+        <p class="text-color-on-dark-muted leading-relaxed">As always, we’ll remain open to community feedback 💬 and suggestions throughout every stage of the platform’s evolution. Our long-term goal is to build a living, adaptive system that evolves in sync with every trader who uses it 🔁.</p>
+      </section>
+
+      <!-- Tokenomics -->
+      <section id="tokenomics">
+        <h2 class="text-3xl font-bold text-gradient-accent mb-4">Tokenomics</h2>
+        <p class="text-color-on-dark-muted leading-relaxed">The Trench Assistant token ($TRASS) is designed not only to unlock access to the platform, but also to actively shape its evolution through utility and governance.</p>
+
+        <h3 class="text-xl font-semibold text-color-on-dark-primary mb-2">Token Supply & Allocation</h3>
+        <p class="text-color-on-dark-muted leading-relaxed">• Team Allocation: 20% — locked for one year and then gradually vested</p>
+        <p class="text-color-on-dark-muted leading-relaxed">• Community Treasury: 5% — a reserve dedicated to rewarding user contributions and incentivizing platform growth</p>
+        <p class="text-color-on-dark-muted leading-relaxed">• Liquidity & Public Sale: 75%</p>
+
+        <h3 class="text-xl font-semibold text-color-on-dark-primary mb-2">Utility & Access</h3>
+        <p class="text-color-on-dark-muted leading-relaxed">Holding $TRASS unlocks access to the Trench Assistant terminal. Starting from Phase 1, a balance of at least 50,000 $TRASS in a wallet is required to use the platform, including personalized multivariate analysis and advanced wallet scanning features.</p>
+
+        <h3 class="text-xl font-semibold text-color-on-dark-primary mb-2">Governance & Feature Proposals</h3>
+        <p class="text-color-on-dark-muted leading-relaxed">From Phase 2 onward, users who meet the access threshold will be able to submit feature proposals directly through the official website. In Phase 3, governance will expand to include voting mechanisms: token holders will be able to vote on proposed features that they would like to be developed, with voting power proportional to the amount of $TRASS held.</p>
+
+        <h3 class="text-xl font-semibold text-color-on-dark-primary mb-2">Incentives & Burn Mechanics</h3>
+        <p class="text-color-on-dark-muted leading-relaxed">Contributors whose feature proposals receive strong community support through voting will be rewarded with a $TRASS airdrop from the Community Treasury. To help maintain price stability and prevent excessive sell pressure, a proportional amount of tokens will be burned from the team’s allocation for each airdrop distributed. This dual mechanism ensures contributors are rewarded while preserving long-term token value.</p>
+
+        <p class="text-color-on-dark-muted leading-relaxed">The $TRASS token is more than just an access key — it’s a tool for participation, governance, and aligned incentives within a platform built for real traders.</p>
+      </section>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <div id="footer-container"></div>
+
+  <!-- Load Navbar and Footer after containers exist -->
+  <script type="module">
+    import { loadComponent } from '/scripts/loadComponent.js';
+
+    loadComponent('/components/navbar.html', 'navbar-container');
+    loadComponent('/components/footer.html', 'footer-container');
+  </script>
+
+</body>
+</html>
