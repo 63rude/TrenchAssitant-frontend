@@ -1,5 +1,6 @@
 <footer class="footer-dark py-12 px-4 sm:px-6 lg:px-8">
   <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+    
     <!-- Brand and About -->
     <div class="md:col-span-1">
       <div class="flex items-center mb-4">
@@ -16,8 +17,9 @@
       <h5 class="text-footer-dark-theme-heading text-lg font-semibold mb-4">Quick Links</h5>
       <ul class="space-y-2">
         <li><a href="/index.html" class="link-footer-dark-theme text-sm">Home</a></li>
-        <li><a href="/tokenomics.html" class="link-footer-dark-theme text-sm">Tokenomics</a></li>
-        <li><a href="/roadmap.html" class="link-footer-dark-theme text-sm">Roadmap</a></li>
+        <li><a href="/index.html#how-it-works" class="link-footer-dark-theme text-sm">How it works</a></li>
+        <li><a href="/index.html#limitations" class="link-footer-dark-theme text-sm">Limitations</a></li>
+        <li><a href="/litepaper.html" class="link-footer-dark-theme text-sm">Litepaper</a></li>
         <li>
           <a href="https://x.com/TrenchAssistant" target="_blank" rel="noopener noreferrer" class="link-footer-dark-theme text-sm flex items-center">
             <i class="fa-brands fa-x-twitter mr-2"></i>Follow on X
@@ -36,11 +38,13 @@
       </ul>
     </div>
   </div>
+
   <div class="mt-8 pt-8 border-t border-color-dark-secondary text-center">
     <p class="text-sm text-color-on-dark-muted">
       &copy; <span id="currentYear"></span> TrenchAssistant. All rights reserved.
     </p>
   </div>
+
   <script>
     if (document.getElementById('currentYear')) {
       document.getElementById('currentYear').textContent = new Date().getFullYear();
