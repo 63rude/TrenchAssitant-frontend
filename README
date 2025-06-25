@@ -1,0 +1,41 @@
+# 🌐 TrenchAssistant Frontend
+
+This is the frontend interface for **TrenchAssistant**, a Solana wallet analytics tool. Users can input a wallet address, trigger a backend analysis, and view a detailed performance report based on enriched transaction data and market insights.
+
+---
+
+## 🧠 What It Does
+
+- ✅ Accepts Solana wallet input from the user
+- 🚀 Sends requests to the FastAPI backend to launch a wallet analysis session
+- 🔄 Polls session status and displays progress
+- 📊 Displays session results:
+  - Total profit/loss
+  - Win rate
+  - Average and median hold time
+  - Best and worst trades
+  - Token-level performance summaries
+
+---
+
+## 🧩 Tech Stack
+
+- **Framework**: React (or plain JS if you're not using a framework)
+- **API Integration**: Connects with FastAPI backend via REST
+- **Styling**: Tailwind / CSS Modules / [your styling choice]
+- **Hosting**: [e.g., Vercel, Netlify, GitHub Pages, etc.]
+
+---
+
+## 🛠 How to Run Locally
+
+git clone https://github.com/yourusername/trenchassistant-frontend.git
+cd trenchassistant-frontend
+npm install
+npm start
+
+Make sure the backend is running locally on port 8000 (or update the API base URL in your frontend config).
+
+🌍 Live Demo
+
+👉 https://trenchassistant.app
