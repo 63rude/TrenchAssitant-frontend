@@ -1,12 +1,10 @@
 node_modules/
-dist/  
-# Logs
-logs 
-npm-debug.log*
-yarn-debug.log*
-
-# Dependency directories
-jspm_packages/
-
-# Optional npm cache directory
-.npm
+dist/
+.vite/
+.env
+.env.*
+!.env.example
+*.log
+.npm/
+.DS_Store
+Thumbs.db

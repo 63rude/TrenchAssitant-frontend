@@ -1,6 +1,6 @@
 import { updateHeroStatusIndicator } from './statusIndicator.js';
 
-const API_BASE = 'https://trenchassistant-python.onrender.com';
+const API_BASE = import.meta.env.VITE_API_BASE_URL?.replace(/\/$/, '') || '';
 
 /**
  * Formats a number as currency (USD).
@@ -63,7 +63,6 @@ export async function fetchAndDisplayResults(walletAddress, targetContainerId = 
     }
 
     const results = await response.json();
-    console.log('[results.js] ACTUAL results data received:', JSON.stringify(results, null, 2));
 
     const summary = results.summary_stats || results;
 

@@ -1,16 +1,13 @@
-console.log('[session.js] Script loaded and parsing started. (Top of file)');
 
 import { updateHeroStatusIndicator, updateRecentSessionStatus } from './statusIndicator.js';
 import { fetchAndDisplayLogs } from './logs.js';
 import { fetchAndDisplayResults } from './results.js';
 
-const API_BASE = 'https://trenchassistant-python.onrender.com';
+const API_BASE = import.meta.env.VITE_API_BASE_URL?.replace(/\/$/, '') || '';
 let pollIntervalId = null;
 
-console.log('[session.js] Imports loaded, API_BASE and pollIntervalId initialized.');
 
 async function pollStatus(sessionId, runAnalysisButton, walletAddress) {
-  console.log('[pollStatus] Called for session:', sessionId, 'Wallet:', walletAddress);
   try {
     const response = await fetch(`${API_BASE}/get_session_status/${sessionId}`);
     if (!response.ok) {
@@ -23,7 +20,6 @@ async function pollStatus(sessionId, runAnalysisButton, walletAddress) {
     }
 
     const data = await response.json();
-    console.log('[pollStatus] Received data:', data);
 
     const status = data.status ? data.status.toLowerCase() : 'unknown';
 
@@ -37,7 +33,6 @@ async function pollStatus(sessionId, runAnalysisButton, walletAddress) {
         fetchAndDisplayLogs(sessionId);
         break;
       case 'completed':
-        console.log('[pollStatus] Status completed. Fetching results for wallet:', walletAddress);
         clearInterval(pollIntervalId); pollIntervalId = null;
         if (runAnalysisButton) runAnalysisButton.disabled = false;
         fetchAndDisplayResults(walletAddress); 
@@ -65,7 +60,6 @@ async function pollStatus(sessionId, runAnalysisButton, walletAddress) {
 }
 
 function initializeHeroSectionInteractions() {
-  console.log('[session.js] initializeHeroSectionInteractions called.');
   updateHeroStatusIndicator('idle');
 
   const runAnalysisButton = document.getElementById('runAnalysisBtn');
@@ -77,11 +71,8 @@ function initializeHeroSectionInteractions() {
   const heroResultsContent = document.getElementById('hero-session-results-content');
 
   if (runAnalysisButton && walletAddressInput) {
-    console.log('[session.js] runAnalysisButton and walletAddressInput FOUND in Hero section. Attaching event listener.');
     runAnalysisButton.addEventListener('click', async () => {
-      console.log('[session.js] runAnalysisButton CLICKED.');
       const walletAddress = walletAddressInput.value.trim();
-      console.log('[session.js] Wallet address input value:', `"${walletAddress}"`);
 
       if (!walletAddress) {
         updateHeroStatusIndicator('error', 'Input Error', 'Please enter a wallet address.');
@@ -99,13 +90,11 @@ function initializeHeroSectionInteractions() {
       if (heroResultsContainer) heroResultsContainer.classList.add('hidden');
 
       if (pollIntervalId) {
-        console.log('[session.js] Clearing existing poll interval before starting new session.');
         clearInterval(pollIntervalId);
         pollIntervalId = null;
       }
 
       try {
-        console.log('[session.js] Sending /start_session request for address:', walletAddress);
         const response = await fetch(`${API_BASE}/start_session`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -122,13 +111,11 @@ function initializeHeroSectionInteractions() {
 
         if (data && typeof data === 'object' && data.session_id && typeof data.session_id === 'string' && data.session_id.trim() !== '') {
           const sessionId = data.session_id;
-          console.log('[session.js] Session ID received:', sessionId, 'Starting polling for wallet:', walletAddress);
           updateHeroStatusIndicator('loading', 'Session Started', `Polling status for session ID: ${sessionId.substring(0, 8)}...`);
           pollIntervalId = setInterval(() => pollStatus(sessionId, runAnalysisButton, walletAddress), 5000);
           pollStatus(sessionId, runAnalysisButton, walletAddress);
         } else {
-          const dataType = data === null ? 'null' : Array.isArray(data) ? 'array' : typeof data;
-          console.error(`[session.js] Invalid or missing session_id. Received type: ${dataType}.`, data);
+          console.error('Invalid or missing session ID in backend response.');
           updateHeroStatusIndicator('error', 'Session Error', 'Invalid session data from server.');
           if (runAnalysisButton) runAnalysisButton.disabled = false;
         }
@@ -139,13 +126,10 @@ function initializeHeroSectionInteractions() {
       }
     });
   } else {
-    console.error('[session.js] CRITICAL: runAnalysisButton or walletAddressInput NOT FOUND. Event listener NOT attached.');
+    console.error('Wallet input or analysis button was not found.');
   }
 }
 
 document.addEventListener('componentsLoaded', () => {
-  console.log('[session.js] Event: componentsLoaded received. Initializing hero section interactions.');
   initializeHeroSectionInteractions();
 });
-
-console.log('[session.js] Script parsing finished. Event listeners set up. (End of file)');

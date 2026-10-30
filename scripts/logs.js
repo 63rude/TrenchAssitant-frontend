@@ -1,4 +1,4 @@
-const API_BASE = 'https://trenchassistant-python.onrender.com'; // Use consistent API root
+const API_BASE = import.meta.env.VITE_API_BASE_URL?.replace(/\/$/, '') || '';
 
 /**
  * Fetches and displays session logs.

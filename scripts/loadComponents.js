@@ -1,5 +1,3 @@
-console.log('[loadComponents.js] Script loaded.');
-
 async function fetchComponent(url) {
   const response = await fetch(url);
   if (!response.ok) {
@@ -22,20 +20,16 @@ const componentsToLoad = [
 ];
 
 export async function initializePageComponents() {
-  console.log('[loadComponents.js] initializePageComponents called.');
   try {
     for (const component of componentsToLoad) {
       const container = document.getElementById(component.containerId);
       if (container) {
-        console.log(`[loadComponents.js] Loading ${component.filePath} into #${component.containerId}`);
         const html = await fetchComponent(component.filePath);
         container.innerHTML = html; // Replaces content of container (e.g., placeholder divs)
-        console.log(`[loadComponents.js] Successfully loaded ${component.filePath} into #${component.containerId}`);
       } else {
         console.warn(`[loadComponents.js] Container #${component.containerId} not found for ${component.filePath}. Skipping.`);
       }
     }
-    console.log('[loadComponents.js] All components loaded successfully. Dispatching componentsLoaded event.');
     document.dispatchEvent(new CustomEvent('componentsLoaded'));
   } catch (error) {
     console.error('[loadComponents.js] Error loading components:', error);
